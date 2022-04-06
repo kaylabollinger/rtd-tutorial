@@ -10,9 +10,6 @@ build:
   os: ubuntu-20.04
   tools:
     python: "3.9"
-      # Install our python package before building the docs
-      install:
-        - method: pip
     # You can also specify other tool versions:
     # nodejs: "16"
     # rust: "1.55"
@@ -30,6 +27,8 @@ formats:
 python:
    install:
    - requirements: docs/requirements.txt
+   - method: pip
+     path: .
 
 sphinx:
   fail_on_warning: true
